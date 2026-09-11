@@ -1,5 +1,9 @@
 # Hugging Face AI Agents Course
 
+![GAIA final project: 20 of 20 correct](media/gaia.gif)
+
+![Pokemon battle agent replay, drawn from the turn log](media/battle.gif)
+
 My work through the [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course):
 the smolagents unit, the GAIA final project (scored 100%), and the bonus Pokemon battle agent.
 

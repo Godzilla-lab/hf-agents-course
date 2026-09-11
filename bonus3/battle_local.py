@@ -14,6 +14,8 @@ Every battle writes a turn-by-turn log to bonus3/logs/<battle_tag>.txt.
 import argparse
 import asyncio
 import os
+import random
+import string
 import time
 
 from poke_env import AccountConfiguration, LocalhostServerConfiguration
@@ -37,7 +39,11 @@ def make_agent(kind: str, name: str, model: str):
 
 
 async def main(args) -> None:
-    me = make_agent(args.agent, args.name, args.model)
+    # Unique names per run: the server remembers old sessions by name, and a bot that
+    # reconnects under a name from a killed run inherits that run's half-finished battle.
+    suffix = "".join(random.choices(string.digits, k=4))
+    bot_name = args.name if args.play else f"{args.name}{suffix}"
+    me = make_agent(args.agent, bot_name, args.model)
 
     if args.play:
         print(f"Bot '{args.name}' is online on the local server and waiting for ONE challenge.")
@@ -46,7 +52,7 @@ async def main(args) -> None:
         print(f"3. Pick the format {config.BATTLE_FORMAT} and send it. Watch the terminal and the browser.")
         await me.accept_challenges(None, 1)
     else:
-        opp = OPPONENTS[args.vs](account_configuration=AccountConfiguration(f"{args.vs.title()}Bot", None),
+        opp = OPPONENTS[args.vs](account_configuration=AccountConfiguration(f"{args.vs.title()}Bot{suffix}", None),
                                  server_configuration=LocalhostServerConfiguration,
                                  battle_format=config.BATTLE_FORMAT, max_concurrent_battles=1)
         t0 = time.time()
