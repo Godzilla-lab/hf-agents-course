@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>GAIA agent (Unit 4)</title>
+<style>body{font-family:system-ui,sans-serif;max-width:720px;margin:3rem auto;padding:0 1rem;line-height:1.5}code{background:#eee;padding:.1em .3em;border-radius:3px}</style></head>
+<body>
+<h1>GAIA agent, Hugging Face Agents Course Unit 4</h1>
+<p>This Space holds the source code of a smolagents <code>CodeAgent</code> that answers the
+20 GAIA Level 1 questions of the final assignment. Browse the code under
+<a href="https://huggingface.co/spaces/godzilla1215/gaia-agent/tree/main">Files</a>.</p>
+<ul>
+<li><code>agent.py</code>: builds the agent, wraps each question, scrubs answers into exact-match shape</li>
+<li><code>tools.py</code>: web search, page reading, Wikipedia as of a date, file readers, audio transcription, image analysis, YouTube frames, chess board reading plus Stockfish</li>
+<li><code>run_local.py</code>: harness that runs questions, caches answers, and submits</li>
+<li><code>app.py</code>: Gradio version of the same agent (needs a Gradio Space to run)</li>
+</ul>
+<p>Brain: Grok 4.6 through LiteLLM. Hearing: Gemini. Chess: Stockfish 19.</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# environments and secrets
+.venv/
+.env
+*.env
+__pycache__/
+*.pyc
+.DS_Store
+
+# unit4: downloaded attachments, answer cache, engine binary, logs
+unit4/files/
+unit4/bin/
+unit4/answers.json
+unit4/expected.json
+unit4/submissions.log
+unit4/*.log
+
+# bonus3: the cloned Showdown server (300 MB) and battle logs
+bonus3/pokemon-showdown/
+bonus3/logs/

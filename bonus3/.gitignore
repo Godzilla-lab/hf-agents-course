@@ -1,0 +1,4 @@
+pokemon-showdown/
+logs/
+__pycache__/
+*.pyc

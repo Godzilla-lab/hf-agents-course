@@ -1,0 +1,8 @@
+.env
+files/
+answers.json
+expected.json
+submissions.log
+__pycache__/
+*.pyc
+bin/
