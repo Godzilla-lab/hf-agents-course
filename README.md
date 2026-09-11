@@ -2,7 +2,7 @@
 
 ![GAIA final project: 20 of 20 correct](media/gaia.gif)
 
-![Pokemon battle agent replay, drawn from the turn log](media/battle.gif)
+![Pokemon battle agent replay: Grok beats SimpleHeuristicsPlayer in 24 turns, drawn from the turn log](media/battle.gif)
 
 My work through the [Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course):
 the smolagents unit, the GAIA final project (scored 100%), and the bonus Pokemon battle agent.
@@ -11,7 +11,7 @@ the smolagents unit, the GAIA final project (scored 100%), and the bonus Pokemon
 | --- | --- | --- |
 | [Unit 2.1](#unit-21-smolagents) | smolagents playground: first CodeAgent, tools, sandbox, multi-agent | 8 runnable scripts |
 | [Unit 4](#unit-4-gaia-final-project) | GAIA benchmark agent, the final assignment | **20/20 correct, 100%**, on the [student leaderboard](https://huggingface.co/spaces/agents-course/Students_leaderboard) |
-| [Bonus 3](#bonus-unit-3-pokemon-battle-agent) | LLM Pokemon battle agent on Pokemon Showdown via poke-env | beats the random bot; see below for the heuristic-bot score |
+| [Bonus 3](#bonus-unit-3-pokemon-battle-agent) | LLM Pokemon battle agent on Pokemon Showdown via poke-env | 3-2 (60%) against poke-env's strongest built-in bot |
 
 Certificate of Completion: issued by Hugging Face after the final assignment; claim page at
 https://huggingface.co/spaces/agents-course/Unit4-Final-Certificate, score visible on the
@@ -82,7 +82,7 @@ Results on a private local server (grok-4.3, about $0.15 per battle):
 | opponent | score |
 | --- | --- |
 | RandomPlayer | 1-0 |
-| SimpleHeuristicsPlayer | 5-battle series in progress |
+| SimpleHeuristicsPlayer | 3-2 (60%), 104 decisions, 1 fallback, $0.15 total |
 
 ### Run it
 
